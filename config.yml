@@ -13,6 +13,9 @@ loaded: true
 # ENABLED | If true, fire-based items may rarely trigger a flash fire. Must be enabled manually.
 enabled: false
 #
+# BLAZE | If true, wildfires have a small chance to spawn a Blaze, as well.
+blaze: false
+#
 # LANGUAGE | Currently supported languages: English only (for now!)
 language: English
 # 
