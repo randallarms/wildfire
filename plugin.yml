@@ -1,0 +1,10 @@
+name: WildFire
+main: com.kraken.wildfire.Main
+version: 1.0
+commands: 
+     wildfire:
+        description: Controls the WildFire plugin.
+        usage: /<command> <argument>
+permissions:
+     wildfire.*:
+        description: Permission for all LoginBonus commands.
