@@ -6,8 +6,10 @@ import java.util.WeakHashMap;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -44,11 +46,12 @@ public class MainListener implements Listener {
     	Block block = event.getBlock();
     	Location loc = block.getLocation();
     	
-    	//Roll 1/10 chance to cause a wildfire
+    	//Random roll number
     	Random random = new Random();
-    	int roll = random.nextInt(10);
+    	int roll = random.nextInt(100);
     	
-    	if ( roll == 9 && options.get("enabled") ) {
+    	//Roll 1/10 chance to cause a wildfire (10%)
+    	if ( roll >= 90 && options.get("enabled") ) {
     		
     		Location b1 = block.getLocation().add(0, -1, 1);
     		Location b2 = block.getLocation().add(0, -1, -1);
@@ -83,8 +86,12 @@ public class MainListener implements Listener {
     		b14.getBlock().getRelative(BlockFace.UP).setType(Material.FIRE);
     		b15.getBlock().getRelative(BlockFace.UP).setType(Material.FIRE);
     		b16.getBlock().getRelative(BlockFace.UP).setType(Material.FIRE);
-    		
-    		System.out.println("Wildfire started @ coords x:" + loc.getX() + ", y:" + loc.getY() + ", z:" + loc.getZ() + "!");
+
+    		//Roll 1/100 chance to cause a Blaze spawn (1%)
+    		if ( roll >= 99 && options.get("blaze") ) {
+    			World world = loc.getWorld();
+    			world.spawnEntity(loc, EntityType.BLAZE);
+    		}
     		
     	}
     	

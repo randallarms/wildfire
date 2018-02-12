@@ -62,6 +62,7 @@ public class Main extends JavaPlugin implements Listener {
 		
 	    //Loading default settings into options
     	setOption( "enabled", getConfig().getBoolean("enabled") );
+    	setOption( "blaze", getConfig().getBoolean("blaze") );
     	setOption( "permissions", getConfig().getBoolean("permissions") );
     	setOption( "silentMode", getConfig().getBoolean("silentMode") );
     	silencer( options.get("silentMode") );
