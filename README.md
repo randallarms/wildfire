@@ -1,4 +1,4 @@
-#WILDFIRE
+# WildFire
 
 Simple & configurable login bonus plugin for Bukkit on Minecraft 1.12!
 
