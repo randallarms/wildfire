@@ -1,12 +1,6 @@
 #WILDFIRE
 
-by Kraken | https://www.spigotmc.org/resources/wildfire.53206/
-
 Simple & configurable login bonus plugin for Bukkit on Minecraft 1.12!
-
-HOW TO INSTALL AND USE: https://www.spigotmc.org/resources/wildfire.53206/
-
-Guides & plugin to be updated consistently! This plugin is far from complete, and represents an open-source, work-in-progress project.
 
 #WildFire on GitHub: https://github.com/randallarms/wildfire
 
